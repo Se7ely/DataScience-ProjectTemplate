@@ -1,0 +1,1 @@
+Data that have undergone some transformation but isn't ready for usage should be stored here.

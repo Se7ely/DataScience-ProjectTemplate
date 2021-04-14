@@ -1,0 +1,1 @@
+Weights, binary, or confing files representing a saved model version should be stored here.

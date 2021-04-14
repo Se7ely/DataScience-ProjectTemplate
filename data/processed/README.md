@@ -1,0 +1,1 @@
+Processed data that will be used for training/validation/testing/inference should be stored here.
