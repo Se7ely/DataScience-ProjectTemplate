@@ -1,4 +1,4 @@
-def module_level_function(param1, param2=None, *args, **kwargs):
+def module_level_function(param1: str, param2=None : str, *args, **kwargs): -> bool
     """This is an example of a module level function.
 
     Function parameters should be documented in the ``Args`` section. The name
