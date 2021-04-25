@@ -1,6 +1,50 @@
-<!-- Add banner here -->
-![Banner](docs/project/DirectoryLayout.png)
+## Structure Expaination
+- data: A folder that should contain all data files
+    - external: Sub-folder for data from external sources 
+    - interem: Sub-folder for data that has undergone interemediate but not full processing
+    - processed: Sub-folder for data that has undergone full processing and ready to be used
+    - raw: Sub-folder for raw data generating or gathered internally
+- docs: A folder containing documentation files
+    - data: Sub-folder for data documentation
+        - data_definition.md: A file provding an overview of all the data included in the project (example included)
+        - data_report.md: A file specific for a single dataset provding statistics about the data and variables in it, a seperate file should be included for each dataset in the project (example included)
+    - models: Sub-folder for model documentation
+        - v#.#
+            - model_report.md: A file specific to a certain model defining the algorithm used, data used, features, and performance (example included)
+    - project: Sub-folder for project documentation
+        - charter​.​md: A file that should be compiled before starting the project to define business goals, evaluations metrics, etc. (example included)
+        - exit_report.md: A file that should be compiled at the end of the project containing different findings, perfermance, technical details, etc. (example included)
+- models: A folder that should contain all saved model files
+    - v#.#
+- notebooks: A folder containing notebooks for experiments, presentations, visualizations, etc. (but not final code)
+- src: A folder containing the main source code of the preoject
+    - data: Sub-folder for all data-related code
+    - features: Sub-folder for all features-related code
+    - model: Sub-folder for main model processes: definition, training, inference
+        - architecture: Sub-folder for files defining model(s) architecture
+        - training: Sub-folder for training scripts/notebooks
+        - inference: Subfolder for inference scripts/notebooks
+    - utils: Sub-folder for general utils commonly used in different files
+- .gitignore
+- README.​md
+- requirements.yml: A file containing project dependencies to be exported using conda, not written manually (example provdided)
+- setup.​py: A file containing the setup template needed for packaging the project (optional)
 
+## DVC Setup Instructions:
+- Follow: https://dvc.org/doc/install/linux
+- Follow: https://dvc.org/doc/start
+- Install gcloud or storage to be used
+- Enter:  ```gcloud auth application-default login``` or equivalent
+- Enter verification code after followinig the link using an @aim email
+- Enter: dvc remote add -d origin_name link.to.bucket
+- To upload data/models:
+    - dvc add filename
+    - dvc push
+- To download data/models:
+    - dvc pull
+
+
+# README.​md Template
 # Project Title
 
 <!-- Add buttons here -->
